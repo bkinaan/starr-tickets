@@ -27,8 +27,6 @@ with open('data.csv', 'r') as csv_file:
                         
 print("------------------PRINTING LIST 1------------------")
 print(prize1)
-for i in range(0, 100):
-    print(prize1)
 print("------------------PRINTING LIST 2------------------")
 print(prize2)
 print("------------------PRINTING LIST 3------------------")
