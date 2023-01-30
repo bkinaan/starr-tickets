@@ -14,25 +14,25 @@ with open('data.csv', 'r') as csv_file:
             for item in range(2, 8):
                 prize = column[item].replace('\n', '')
                 match prize:
-                    case "Prize 1":
+                    case "Dino Launcher":
                         prize1 += name + "\n"
-                    case "Prize 2":
+                    case "Magnetic Tiles":
                         prize2 += name + "\n"
-                    case "Prize 3":
+                    case "Gem Art Kit":
                         prize3 += name + "\n"
-                    case "Prize 4":
+                    case "Elephant":
                         prize4 += name + "\n"
-                    case "Prize 5":
+                    case "Dog":
                         prize5 += name + "\n"
                         
-print("------------------PRINTING LIST 1------------------")
+print("------------------PRINTING Dino Launcher------------------")
 print(prize1)
-print("------------------PRINTING LIST 2------------------")
+print("------------------PRINTING Magnetic Tiles------------------")
 print(prize2)
-print("------------------PRINTING LIST 3------------------")
+print("------------------PRINTING Gem Art Kit------------------")
 print(prize3)
-print("------------------PRINTING LIST 4------------------")
+print("------------------PRINTING Elephant------------------")
 print(prize4)
-print("------------------PRINTING LIST 5------------------")
+print("------------------PRINTING Dog------------------")
 print(prize5)
 print("done")
