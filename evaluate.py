@@ -5,34 +5,37 @@ prize2 = ""
 prize3 = ""
 prize4 = ""
 prize5 = ""
+empty = ""
 
-with open('data.csv', 'r') as csv_file:
+with open('data3.csv', 'r') as csv_file:
     for row in csv_file.readlines():
         column = row.split(',')
         name = column[1]
         if name != "Little Buddy's First and Last Name":
-            for item in range(2, 8):
+            for item in range(2, 6):
                 prize = column[item].replace('\n', '')
-                match prize:
-                    case "Dino Launcher":
-                        prize1 += name + "\n"
-                    case "Magnetic Tiles":
-                        prize2 += name + "\n"
-                    case "Gem Art Kit":
-                        prize3 += name + "\n"
-                    case "Elephant":
-                        prize4 += name + "\n"
-                    case "Dog":
-                        prize5 += name + "\n"
+                if prize == "Light-Up Terrarium":
+                    prize1 += name + "\n"
+                elif prize ==  "Magnetic Pen":
+                    prize2 += name + "\n"
+                elif prize == "Heart Eyes Emoji":
+                    prize3 += name + "\n"
+                elif prize == "Dino":
+                    prize4 += name + "\n"
+                elif prize == "Sticker Book":
+                    prize5 += name + "\n"
+                else:
+                    empty += name + "\n"
+                    
                         
-print("------------------PRINTING Dino Launcher------------------")
+print("------------------PRINTING Light-Up Terrarium------------------")
 print(prize1)
-print("------------------PRINTING Magnetic Tiles------------------")
+print("------------------PRINTING Magnetic Pen------------------")
 print(prize2)
-print("------------------PRINTING Gem Art Kit------------------")
+print("------------------PRINTING Heart Eyes Emoji------------------")
 print(prize3)
-print("------------------PRINTING Elephant------------------")
+print("------------------PRINTING Dino------------------")
 print(prize4)
-print("------------------PRINTING Dog------------------")
+print("------------------PRINTING Sticker Book------------------")
 print(prize5)
 print("done")
